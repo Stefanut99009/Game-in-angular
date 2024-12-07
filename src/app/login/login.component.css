@@ -1,0 +1,26 @@
+html, body {
+  height: 100%;  /* Make sure body and html take the full height of the viewport */
+  margin: 0;  /* Remove default margins */
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+}
+
+.login-form {
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 5px 5px black;
+  width: auto;
+}
+
+.input-control {
+  width: 100%;
+}
+.btn-container{
+  padding: 10px;
+}

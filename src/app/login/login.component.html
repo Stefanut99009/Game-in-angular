@@ -1,0 +1,21 @@
+<div class="center">
+  <div class="login-form">
+    <div class="form-group row">
+      <label for="uname">Username</label>
+      <input type="text" name="uname" id="uname" class="input-control"
+             [value]="username"
+             (input)="onUsernameInput($event)">
+    </div>
+
+    <div class="form-group row">
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password" class="input-control"
+             [value]="password"
+             (input)="onPasswordInput($event)">
+    </div>
+
+    <div class="btn-container">
+      <button class="btn btn-dark" (click)="login()">Login</button>
+    </div>
+  </div>
+</div>

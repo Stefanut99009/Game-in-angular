@@ -1,0 +1,22 @@
+<div class="game-container">
+  <h1>Number Guessing Game</h1>
+  <p>Guess a number between 1 and 100.</p>
+
+  <input
+    type="number"
+    [formControl]="guessControl"
+    min="1"
+    max="100"
+    placeholder="Enter your guess" />
+
+  <button (click)="checkGuess()">Check Guess</button>
+  <button (click)="resetGame()">Reset Game</button>
+
+  <div *ngIf="feedback">
+    <p>{{ feedback }}</p>
+  </div>
+
+  <div *ngIf="attempts > 0">
+    <p>Attempts: {{ attempts }}</p>
+  </div>
+</div>
