@@ -5,7 +5,7 @@ import { ReactiveFormsModule, FormControl } from '@angular/forms';
 @Component({
   selector: 'app-game',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],  // Import ReactiveFormsModule
+  imports: [CommonModule, ReactiveFormsModule],  
   templateUrl: './game.component.html',
   styleUrls: ['./game.component.css']
 })
@@ -14,7 +14,6 @@ export class GameComponent {
   feedback: string = '';
   attempts: number = 0;
 
-  // Create a new FormControl for the guess
   guessControl = new FormControl(null);
 
   checkGuess() {
@@ -33,7 +32,7 @@ export class GameComponent {
 
   resetGame() {
     this.secretNumber = Math.floor(Math.random() * 100) + 1;
-    this.guessControl.setValue(null);  // Reset the form control value
+    this.guessControl.setValue(null);
     this.feedback = '';
     this.attempts = 0;
   }

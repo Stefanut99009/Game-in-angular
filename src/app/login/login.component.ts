@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';  // Import Router for navigation
-
+import { Router } from '@angular/router';  
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -10,9 +9,8 @@ export class LoginComponent {
   username: string = '';
   password: string = '';
 
-  constructor(private router: Router) { }  // Inject Router
+  constructor(private router: Router) { }
 
-  // Event handler for the username input
   onUsernameInput(event: Event): void {
     const input = event.target as HTMLInputElement;
     if (input) {
@@ -20,7 +18,6 @@ export class LoginComponent {
     }
   }
 
-  // Event handler for the password input
   onPasswordInput(event: Event): void {
     const input = event.target as HTMLInputElement;
     if (input) {
@@ -29,14 +26,10 @@ export class LoginComponent {
   }
 
   login() {
-    // Here you would typically authenticate the user, but for now,
-    // we'll assume the login is successful if the username and password are filled in.
     if (this.username && this.password) {
       console.log('Logging in with', this.username, this.password);
 
-      // Navigate to the home page after a successful login
-      this.router.navigate(['/game']);  // Adjust the route if needed
-    } else {
+      this.router.navigate(['/game']);
       console.log('Please enter both username and password');
     }
   }
